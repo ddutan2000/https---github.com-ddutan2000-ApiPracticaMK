@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Pedidos</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>CODIGO</th>
+            <th>CANTIDAD</th>
+            <th>TOTAL</th>
+            <th>FECHA</th>
+            <th>CLIENTE</th>
+            <th>PRODUCTO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedido of pedidos" class="text-center">
+            <td>{{pedido.codigo}}</td>
+            <td>{{pedido.cantidad}}</td>
+            <td>{{pedido.total}}</td>
+            <td>{{pedido.fecha}}</td>
+            <td>{{pedido.cedulaC}}</td>
+            <td>{{pedido.idproducto}}</td>
+            <td>
+              <!--button (click)="Editar(persona)" class="btn btn-warning">Editar</button-->
+              <button (click)="Delete(pedido)" class="btn btn-danger" style="margin-left: 10px;">Delete pedido</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

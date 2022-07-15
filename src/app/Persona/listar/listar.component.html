@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Clientes</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>NOMBRES</th>
+            <th>APELLIDOS</th>
+            <th>DIRECCION</th>
+            <th>TELEFONO</th>
+            <th>CORREO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let persona of personas" class="text-center">
+            <td>{{persona.id}}</td>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.apellido}}</td>
+            <td>{{persona.direccion}}</td>
+            <td>{{persona.telefono}}</td>
+            <td>{{persona.correo}}</td>
+            <td>
+              <!--button (click)="Editar(persona)" class="btn btn-warning">Editar</button-->
+              <button (click)="Delete(persona)" class="btn btn-danger" style="margin-left: 10px;">Delete Cliente</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
